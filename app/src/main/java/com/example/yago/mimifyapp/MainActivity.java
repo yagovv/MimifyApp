@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
 
     EditText input;
     ImageButton botonMimify;
+    Button botonClear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,19 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         input = findViewById(R.id.inputText);
         botonMimify = findViewById(R.id.button_mimify);
+        botonClear = findViewById(R.id.button_clear);
+        botonClear.setOnClickListener(
+                new View.OnClickListener()
+                {
+                    public void onClick(View view)
+                    {
+
+
+                        clear();
+
+                    }
+                }
+        );
 
         botonMimify.setOnClickListener(
                 new View.OnClickListener()
@@ -62,5 +76,8 @@ public class MainActivity extends Activity {
         super.onResume();
         ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
             getFromClipboard();
+    }
+    public void clear(){
+        input.setText("");
     }
 }
