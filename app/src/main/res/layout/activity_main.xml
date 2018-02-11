@@ -10,6 +10,9 @@
     <EditText
 
         android:id="@+id/inputText"
+        android:maxLines = "5"
+
+        android:scrollbars = "vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -17,7 +20,7 @@
         android:layout_marginTop="120dp"
         android:elevation="5dp"
         android:ems="10"
-        android:hint="To mimify"
+        android:hint="Inserte argumento a destruir"
         android:inputType="textMultiLine"
         android:singleLine="false"
         android:textAlignment="textStart"
@@ -30,13 +33,9 @@
         style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
         android:src="@mipmap/ic_launcher_foreground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputText" />
 
@@ -61,5 +60,37 @@
         app:layout_constraintEnd_toStartOf="@+id/button_clear"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputText" />
+
+    <ImageButton
+        android:id="@+id/button_spongify"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="128dp"
+        android:layout_height="123dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/boblaes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button-mimify"
+        app:layout_constraintTop_toBottomOf="@+id/inputText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="8dp"
+        android:text="Mimify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button-mimify" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="8dp"
+        android:text="Spongify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_spongify" />
 
 </android.support.constraint.ConstraintLayout>

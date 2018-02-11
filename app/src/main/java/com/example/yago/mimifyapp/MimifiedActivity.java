@@ -6,6 +6,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,7 +24,7 @@ public class MimifiedActivity extends Activity {
         String message = intent.getStringExtra("EXTRA_MESSAGE");
 
         // Capture the layout's TextView and set the string as its text
-
+        mimified.setMovementMethod(new ScrollingMovementMethod());
         mimified.setText(message);
 
         copy = findViewById(R.id.copyToClipboard);
